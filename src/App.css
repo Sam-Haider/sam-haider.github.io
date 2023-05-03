@@ -23,14 +23,14 @@
 }
 
 .MuiToolbar-root {
-  background-color: rgb(16, 14, 14);
+  background-color: rgb(0, 0, 0);
 }
 
 .App {
   background: linear-gradient(
     180deg,
     rgb(16, 13, 28),
-    rgb(0, 16, 52),
+    rgb(4, 7, 15),
     rgb(16, 13, 28)
   );
   min-height: 100vh;

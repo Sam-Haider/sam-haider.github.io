@@ -2,11 +2,12 @@ import React from "react";
 import { styled } from "@mui/system";
 
 const Image = styled("img")`
-  max-width: 70%;
-  border-radius: 25px;
-  height: auto;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  object-fit: cover;
   border: 2px solid transparent;
-  border-radius: 20px;
   background-image: linear-gradient(white, white),
     linear-gradient(to right, blue, purple);
   background-origin: border-box;
