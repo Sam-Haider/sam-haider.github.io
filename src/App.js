@@ -28,7 +28,7 @@ function App() {
         <AppBar position="static">
           <Toolbar>
             <Typography variant="h6" component={Link} to="/">
-              My Portfolio
+              SMH
             </Typography>
             <Box sx={{ flexGrow: 1 }} />
             <IconButton color="inherit" onClick={handleMenuOpen}>
