@@ -1,17 +1,13 @@
 .MuiTypography-h2 {
-  color: #333;
+  color: #6f6c6c;
   font-size: 4rem;
   font-weight: bold;
 }
 
 .MuiTypography-body1 {
-  color: #666;
+  color: #e6dddd;
   font-size: 2rem;
   line-height: 1.5;
-}
-
-html {
-  background-color: #000000;
 }
 
 .MuiDrawer-paper {
@@ -27,5 +23,15 @@ html {
 }
 
 .MuiToolbar-root {
-  background-color: #141c2c;
+  background-color: rgb(16, 14, 14);
+}
+
+.App {
+  background: linear-gradient(
+    180deg,
+    rgb(16, 13, 28),
+    rgb(0, 16, 52),
+    rgb(16, 13, 28)
+  );
+  min-height: 100vh;
 }

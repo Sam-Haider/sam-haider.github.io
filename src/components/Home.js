@@ -1,31 +1,59 @@
 import React from "react";
-import { Typography, Grid } from "@mui/material";
 import { styled } from "@mui/system";
 
-const Image = styled("img")({
-  maxWidth: "100%",
-  height: "auto",
+const Image = styled("img")`
+  max-width: 70%;
+  border-radius: 25px;
+  height: auto;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  background-image: linear-gradient(white, white),
+    linear-gradient(to right, blue, purple);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+`;
+
+const Wrapper = styled("div")({
+  display: "flex",
+  justifyContent: "center",
 });
+
+const WelcomeWrapper = styled("div")`
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+`;
+const Welcome = styled("div")`
+  color: white;
+  font-size: 50px;
+`;
+
+const GreetingWrapper = styled("div")`
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+`;
+
+const Greeting = styled("div")`
+  color: white;
+  font-size: 25px;
+`;
 
 function Home() {
   return (
-    <div>
-      <Grid container spacing={2} sx={{ my: 5 }}>
-        <Grid item xs={12} md={6}>
-          <Image src="images/profile.jpeg" alt="Your photo" />
-        </Grid>
-        <Grid item xs={12} md={6}>
-          <Typography variant="h2" component="h1" sx={{ mb: 2 }}>
-            Welcome to my portfolio
-          </Typography>
-          <Typography variant="body1" sx={{ mb: 4 }}>
-            I'm a front-end engineer with experience in React, JavaScript, and
-            CSS. Take a look at my work and get in touch if you'd like to work
-            together!
-          </Typography>
-        </Grid>
-      </Grid>
-    </div>
+    <>
+      <WelcomeWrapper>
+        <Welcome>Welcome!</Welcome>
+      </WelcomeWrapper>
+
+      <GreetingWrapper>
+        <Greeting>I'm Sam. I love JS.</Greeting>
+      </GreetingWrapper>
+
+      <Wrapper>
+        <Image src="images/profile.jpeg" alt="Your photo" />
+      </Wrapper>
+    </>
   );
 }
 
