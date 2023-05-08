@@ -1,7 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Home from "./components/Home";
-import About from "./components/About";
+import MyStory from "./components/MyStory";
+import MyProjects from "./components/MyProjects";
 import "./App.css";
 import { useState } from "react";
 import {
@@ -28,9 +29,9 @@ function App() {
       <Router>
         <AppBar position="static">
           <Toolbar>
-            <Typography variant="h6" component={Link} to="/">
+            {/* <Typography variant="h6" component={Link} to="/">
               SMH
-            </Typography>
+            </Typography> */}
             <Box sx={{ flexGrow: 1 }} />
             <IconButton color="inherit" onClick={handleMenuOpen}>
               <Menu />
@@ -46,7 +47,10 @@ function App() {
                   <ListItemText primary="Home" />
                 </ListItem>
                 <ListItem button component={Link} to="/about">
-                  <ListItemText primary="About" />
+                  <ListItemText primary="My Story" />
+                </ListItem>
+                <ListItem button component={Link} to="/projects">
+                  <ListItemText primary="My Projects" />
                 </ListItem>
               </List>
             </Drawer>
@@ -54,7 +58,8 @@ function App() {
         </AppBar>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/about" element={<MyStory />} />
+          <Route path="/projects" element={<MyProjects />} />
         </Routes>
       </Router>
     </div>

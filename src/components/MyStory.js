@@ -1,5 +1,6 @@
 import React from "react";
 import { styled } from "@mui/system";
+import { Link } from "react-router-dom";
 
 const PageTitleWrapper = styled("div")`
   padding: 20px;
@@ -12,14 +13,14 @@ const PageTitle = styled("div")`
 `;
 
 const Image = styled("img")`
-  width: 85%;
+  width: 100%;
   height: auto;
-  border-radius: 5%;
   overflow: hidden;
   object-fit: cover;
-  border: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid transparent;
   background-image: linear-gradient(white, white),
-    linear-gradient(to right, blue, purple);
+    linear-gradient(to right, #2270c3, #a96f49);
   background-origin: border-box;
   background-clip: content-box, border-box;
 `;
@@ -34,7 +35,6 @@ const ParagraphWrapper = styled("div")`
   padding: 20px;
   display: flex;
   justify-content: left;
-  margin-bottom: 20px;
 `;
 
 const Paragraph = styled("div")`
@@ -59,11 +59,11 @@ const StyledButton = styled("button")`
   border: 1px solid white;
 `;
 
-function Home() {
+function MyStory() {
   return (
     <>
       <PageTitleWrapper>
-        <PageTitle>ABOUT ME</PageTitle>
+        <PageTitle>My Story</PageTitle>
       </PageTitleWrapper>
       <ImageWrapper>
         <Image src="images/MeAtTheComputer.jpg" alt="Your photo" />
@@ -71,7 +71,7 @@ function Home() {
 
       <ParagraphWrapper>
         <Paragraph>
-          Thanks so much for visiting my portfolio. As you can see, my love for
+          Thanks for visiting my portfolio. As you can see, my love for
           technology started at an early age. Although I began my career in the
           healthcare space as an R&D project manager for new drugs, I found
           myself increasingly being drawn to technology and decided to shift my
@@ -123,10 +123,12 @@ function Home() {
       </ParagraphWrapper>
 
       <ButtonWrapper>
-        <StyledButton>My Projects</StyledButton>
+        <Link to="/projects">
+          <StyledButton>My Projects</StyledButton>
+        </Link>
       </ButtonWrapper>
     </>
   );
 }
 
-export default Home;
+export default MyStory;

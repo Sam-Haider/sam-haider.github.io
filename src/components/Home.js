@@ -10,7 +10,7 @@ const Image = styled("img")`
   object-fit: cover;
   border: 3px solid transparent;
   background-image: linear-gradient(white, white),
-    linear-gradient(to right, blue, purple);
+    linear-gradient(to right, #16479b, #f0c043);
   background-origin: border-box;
   background-clip: content-box, border-box;
 `;
