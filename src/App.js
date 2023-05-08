@@ -45,6 +45,9 @@ function App() {
                 <ListItem button component={Link} to="/">
                   <ListItemText primary="Home" />
                 </ListItem>
+                <ListItem button component={Link} to="/about">
+                  <ListItemText primary="About" />
+                </ListItem>
               </List>
             </Drawer>
           </Toolbar>
