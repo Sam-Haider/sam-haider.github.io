@@ -1,10 +1,20 @@
 import React from "react";
 import { styled } from "@mui/system";
 
+const PageTitleWrapper = styled("div")`
+  padding: 20px;
+  display: flex;
+  justify-content: left;
+`;
+const PageTitle = styled("div")`
+  color: white;
+  font-size: 40px;
+`;
+
 const Image = styled("img")`
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
+  width: 85%;
+  height: auto;
+  border-radius: 5%;
   overflow: hidden;
   object-fit: cover;
   border: 3px solid transparent;
@@ -14,35 +24,23 @@ const Image = styled("img")`
   background-clip: content-box, border-box;
 `;
 
-const Wrapper = styled("div")({
+const ImageWrapper = styled("div")({
   display: "flex",
   justifyContent: "center",
   marginBottom: "30px",
 });
 
-const WelcomeWrapper = styled("div")`
+const ParagraphWrapper = styled("div")`
   padding: 20px;
   display: flex;
-  justify-content: center;
-`;
-const Welcome = styled("div")`
-  color: white;
-  font-size: 50px;
-`;
-
-const GreetingWrapper = styled("div")`
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
   margin-bottom: 20px;
 `;
 
-const Greeting = styled("div")`
+const Paragraph = styled("div")`
   color: white;
-  font-size: 1.5rem;
-  text-align: center;
-  width: 90%;
+  font-size: 1.3rem;
+  width: 100%;
 `;
 
 const ButtonWrapper = styled("div")`
@@ -64,23 +62,68 @@ const StyledButton = styled("button")`
 function Home() {
   return (
     <>
-      <WelcomeWrapper>
-        <Welcome>About me</Welcome>
-      </WelcomeWrapper>
+      <PageTitleWrapper>
+        <PageTitle>ABOUT ME</PageTitle>
+      </PageTitleWrapper>
+      <ImageWrapper>
+        <Image src="images/MeAtTheComputer.jpg" alt="Your photo" />
+      </ImageWrapper>
 
-      <GreetingWrapper>
-        <Greeting>
-          I'm Sam. I'm a front-end engineer who loves building well-designed UIs
-          and solving problems with JavaScript.
-        </Greeting>
-      </GreetingWrapper>
+      <ParagraphWrapper>
+        <Paragraph>
+          Thanks so much for visiting my portfolio. As you can see, my love for
+          technology started at an early age. Although I began my career in the
+          healthcare space as an R&D project manager for new drugs, I found
+          myself increasingly being drawn to technology and decided to shift my
+          focus to software development beginning in 2019.
+        </Paragraph>
+      </ParagraphWrapper>
 
-      <Wrapper>
-        <Image src="images/profile.jpeg" alt="Your photo" />
-      </Wrapper>
+      <ParagraphWrapper>
+        <Paragraph>
+          After taking 12 weeks to complete the software engineering immersive
+          program at General Assembly in Boston, I spent several months ideating
+          and building the prototype for
+          {<a href="https://www.instagram.com/joylistapp/?hl=en"> JoyList </a>}
+          using MongoDB, Express, NodeJS, and React. I eventually hired a
+          software development team to take over development and build the
+          mobile apps so that I could focus on product development and customer
+          discovery. Through this experience, I sharpened my skills in full
+          stack development, startup operations, product management, and
+          customer discovery.
+        </Paragraph>
+      </ParagraphWrapper>
+
+      <ParagraphWrapper>
+        <Paragraph>
+          After spending about a year and a half developing JoyList, while also
+          doing some consulting on the side at Alexion, I decided to join HqO as
+          a Software Engineer to help them build their resource booking web
+          application. At HqO, my team was focused on building the company's
+          flagship product, a customer-facing e-commerce application that
+          allowed users to book rooms throughout their office buildings and
+          customize their bookings with amenities, add-ons, catering, and more.
+          At HqO, I learned about the software development lifecycle, how all
+          the teams that are involved in shipping a high-quality software
+          product work together, and how high-performing scrum teams deliver
+          high-value features at a fast pace and with great quality.
+        </Paragraph>
+      </ParagraphWrapper>
+
+      <ParagraphWrapper>
+        <Paragraph>
+          After a tremendous experience at HqO, I ultimately decided to leave
+          the company to pursue other opportunities. I took some time off to do
+          some traveling with my wonderful wife and to attend to some personal
+          matters, and now I'm back looking for my next role as a front end
+          engineer. I'm hoping to join a team that values diversity and
+          collaboration, and am very enthusiastic about working with JavaScript
+          and React.
+        </Paragraph>
+      </ParagraphWrapper>
 
       <ButtonWrapper>
-        <StyledButton>My Story</StyledButton>
+        <StyledButton>My Projects</StyledButton>
       </ButtonWrapper>
     </>
   );
