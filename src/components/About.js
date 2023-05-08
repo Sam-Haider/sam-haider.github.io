@@ -65,7 +65,7 @@ function Home() {
   return (
     <>
       <WelcomeWrapper>
-        <Welcome>Welcome</Welcome>
+        <Welcome>About me</Welcome>
       </WelcomeWrapper>
 
       <GreetingWrapper>
