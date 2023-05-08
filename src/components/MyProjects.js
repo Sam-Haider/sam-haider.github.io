@@ -33,14 +33,27 @@ const ImageWrapper = styled("div")({
 const ProjectsWrapper = styled("div")`
   padding: 20px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
+  .project-link {
+    width: 30%;
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
 `;
 
-const Project = styled("div")`
+const Project = styled("img")`
   border: 1px solid white;
   color: white;
   font-size: 1.3rem;
-  width: 25%;
+  width: 100%;
+`;
+
+const ProjectDescription = styled("div")`
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
 `;
 
 const ButtonWrapper = styled("div")`
@@ -70,9 +83,24 @@ function MyProjects() {
       </ImageWrapper>
 
       <ProjectsWrapper>
-        <Project>Project 1</Project>
-        <Project>Project 2</Project>
-        <Project> Project 2</Project>
+        <a className="project-link" href="https://www.google.com">
+          <Project src="images/laptop.jpg"></Project>
+          <ProjectDescription>MongoDB, Express, Node, React</ProjectDescription>
+        </a>
+        <a className="project-link" href="https://www.google.com">
+          <Project src="images/laptop.jpg"></Project>
+          <ProjectDescription>
+            MongoDB, Express, Node, React. MongoDB, Express, Node, React.
+            MongoDB, Express, Node, React
+          </ProjectDescription>
+        </a>
+        <a className="project-link" href="https://www.google.com">
+          <Project src="images/laptop.jpg"></Project>
+          <ProjectDescription>
+            MongoDB, Express, Node, React. MongoDB, Express, Node, React.
+            MongoDB, Express, Node, React
+          </ProjectDescription>
+        </a>
       </ProjectsWrapper>
       <ButtonWrapper>
         <StyledButton>My Tutorials</StyledButton>
