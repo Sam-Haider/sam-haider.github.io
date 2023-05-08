@@ -44,13 +44,16 @@ function App() {
             >
               <List>
                 <ListItem button component={Link} to="/">
-                  <ListItemText primary="Home" />
+                  <ListItemText onClick={handleMenuOpen} primary="Home" />
                 </ListItem>
                 <ListItem button component={Link} to="/about">
-                  <ListItemText primary="My Story" />
+                  <ListItemText onClick={handleMenuOpen} primary="My Story" />
                 </ListItem>
                 <ListItem button component={Link} to="/projects">
-                  <ListItemText primary="My Projects" />
+                  <ListItemText
+                    onClick={handleMenuOpen}
+                    primary="My Projects"
+                  />
                 </ListItem>
               </List>
             </Drawer>
