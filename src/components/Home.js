@@ -1,5 +1,6 @@
 import React from "react";
 import { styled } from "@mui/system";
+import { Link } from "react-router-dom";
 
 const Image = styled("img")`
   width: 300px;
@@ -80,7 +81,9 @@ function Home() {
       </Wrapper>
 
       <ButtonWrapper>
-        <StyledButton>My Story</StyledButton>
+        <Link to="/about">
+          <StyledButton>My Story</StyledButton>
+        </Link>
       </ButtonWrapper>
     </>
   );
