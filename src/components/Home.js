@@ -72,7 +72,7 @@ function Home() {
       <GreetingWrapper>
         <Greeting>
           I'm Sam. I'm a front-end engineer who loves building well-designed UIs
-          and solving problems with JavaScript.
+          with React and solving problems with JavaScript.
         </Greeting>
       </GreetingWrapper>
 

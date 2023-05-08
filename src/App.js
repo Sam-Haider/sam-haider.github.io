@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Home from "./components/Home";
 import MyStory from "./components/MyStory";
 import MyProjects from "./components/MyProjects";
+import MyTutorials from "./components/MyTutorials";
 import "./App.css";
 import { useState } from "react";
 import {
@@ -43,16 +44,22 @@ function App() {
               ModalProps={{ onBackdropClick: handleMenuOpen }}
             >
               <List>
-                <ListItem button component={Link} to="/">
+                <ListItem component={Link} to="/">
                   <ListItemText onClick={handleMenuOpen} primary="Home" />
                 </ListItem>
-                <ListItem button component={Link} to="/about">
+                <ListItem component={Link} to="/about">
                   <ListItemText onClick={handleMenuOpen} primary="My Story" />
                 </ListItem>
-                <ListItem button component={Link} to="/projects">
+                <ListItem component={Link} to="/projects">
                   <ListItemText
                     onClick={handleMenuOpen}
                     primary="My Projects"
+                  />
+                </ListItem>
+                <ListItem component={Link} to="/tutorials">
+                  <ListItemText
+                    onClick={handleMenuOpen}
+                    primary="My Tutorials"
                   />
                 </ListItem>
               </List>
@@ -63,6 +70,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<MyStory />} />
           <Route path="/projects" element={<MyProjects />} />
+          <Route path="/tutorials" element={<MyTutorials />} />
         </Routes>
       </Router>
     </div>

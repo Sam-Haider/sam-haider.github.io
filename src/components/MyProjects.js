@@ -1,5 +1,6 @@
 import React from "react";
 import { styled } from "@mui/system";
+import { Link } from "react-router-dom";
 
 const PageTitleWrapper = styled("div")`
   padding: 20px;
@@ -103,7 +104,9 @@ function MyProjects() {
         </a>
       </ProjectsWrapper>
       <ButtonWrapper>
-        <StyledButton>My Tutorials</StyledButton>
+        <Link to="/tutorials">
+          <StyledButton>My Tutorials</StyledButton>
+        </Link>
       </ButtonWrapper>
     </>
   );
