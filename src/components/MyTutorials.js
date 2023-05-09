@@ -1,5 +1,6 @@
 import React from "react";
 import { styled } from "@mui/system";
+import { Link } from "react-router-dom";
 
 const PageTitleWrapper = styled("div")`
   padding: 20px;
@@ -59,6 +60,22 @@ const TutorialDescription = styled("div")`
   margin-top: 10px;
 `;
 
+const ButtonWrapper = styled("div")`
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+`;
+
+const StyledButton = styled("button")`
+  padding: 0.7em 2em;
+  background-color: transparent;
+  color: white;
+  font-size: 1.5em;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid white;
+`;
+
 function MyVideos() {
   return (
     <>
@@ -88,6 +105,11 @@ function MyVideos() {
           </TutorialDescription>
         </TutorialLink>
       </TutorialsWrapper>
+      <ButtonWrapper>
+        <Link to="/contact">
+          <StyledButton>Get In Touch</StyledButton>
+        </Link>
+      </ButtonWrapper>
     </>
   );
 }

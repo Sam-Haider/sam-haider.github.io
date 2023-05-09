@@ -63,6 +63,12 @@ function App() {
                     primary="My Tutorials"
                   />
                 </ListItem>
+                <ListItem component={Link} to="/contact">
+                  <ListItemText
+                    onClick={handleMenuOpen}
+                    primary="Get In Touch"
+                  />
+                </ListItem>
               </List>
             </Drawer>
           </Toolbar>
