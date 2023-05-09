@@ -2,6 +2,11 @@ import React from "react";
 import { styled } from "@mui/system";
 import { Link } from "react-router-dom";
 
+const PageWrapper = styled("div")`
+  max-width: 800px;
+  margin: 0 auto;
+`;
+
 const Image = styled("img")`
   width: 300px;
   height: 300px;
@@ -64,7 +69,7 @@ const StyledButton = styled("button")`
 
 function Home() {
   return (
-    <>
+    <PageWrapper>
       <WelcomeWrapper>
         <Welcome>Welcome</Welcome>
       </WelcomeWrapper>
@@ -85,7 +90,7 @@ function Home() {
           <StyledButton>My Story</StyledButton>
         </Link>
       </ButtonWrapper>
-    </>
+    </PageWrapper>
   );
 }
 

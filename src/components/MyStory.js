@@ -2,11 +2,17 @@ import React from "react";
 import { styled } from "@mui/system";
 import { Link } from "react-router-dom";
 
+const PageWrapper = styled("div")`
+  max-width: 800px;
+  margin: 0 auto;
+`;
+
 const PageTitleWrapper = styled("div")`
   padding: 20px;
   display: flex;
   justify-content: left;
 `;
+
 const PageTitle = styled("div")`
   color: white;
   font-size: 40px;
@@ -61,7 +67,7 @@ const StyledButton = styled("button")`
 
 function MyStory() {
   return (
-    <>
+    <PageWrapper>
       <PageTitleWrapper>
         <PageTitle>My Story</PageTitle>
       </PageTitleWrapper>
@@ -127,7 +133,7 @@ function MyStory() {
           <StyledButton>My Projects</StyledButton>
         </Link>
       </ButtonWrapper>
-    </>
+    </PageWrapper>
   );
 }
 

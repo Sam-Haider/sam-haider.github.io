@@ -4,6 +4,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons/faEnvelope";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons/faLinkedin";
 
+const PageWrapper = styled("div")`
+  max-width: 800px;
+  margin: 0 auto;
+`;
+
 const PageTitleWrapper = styled("div")`
   padding: 20px;
   display: flex;
@@ -54,7 +59,7 @@ const Icon = styled(FontAwesomeIcon)`
 
 function Contact() {
   return (
-    <>
+    <PageWrapper>
       <PageTitleWrapper>
         <PageTitle>Contact Me</PageTitle>
       </PageTitleWrapper>
@@ -71,7 +76,7 @@ function Contact() {
           www.linkedin/com/in/sam-m-haider
         </ContactLink>
       </ContactWrapper>
-    </>
+    </PageWrapper>
   );
 }
 

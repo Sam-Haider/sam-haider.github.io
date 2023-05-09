@@ -2,6 +2,11 @@ import React from "react";
 import { styled } from "@mui/system";
 import { Link } from "react-router-dom";
 
+const PageWrapper = styled("div")`
+  max-width: 800px;
+  margin: 0 auto;
+`;
+
 const PageTitleWrapper = styled("div")`
   padding: 20px;
   display: flex;
@@ -78,7 +83,7 @@ const StyledButton = styled("button")`
 
 function MyVideos() {
   return (
-    <>
+    <PageWrapper>
       <PageTitleWrapper>
         <PageTitle>My Tutorials</PageTitle>
       </PageTitleWrapper>
@@ -110,7 +115,7 @@ function MyVideos() {
           <StyledButton>Get In Touch</StyledButton>
         </Link>
       </ButtonWrapper>
-    </>
+    </PageWrapper>
   );
 }
 
