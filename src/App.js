@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import MyStory from "./components/MyStory";
 import MyProjects from "./components/MyProjects";
 import MyTutorials from "./components/MyTutorials";
+import Contact from "./components/Contact";
 import "./App.css";
 import { useState } from "react";
 import {
@@ -71,6 +72,7 @@ function App() {
           <Route path="/about" element={<MyStory />} />
           <Route path="/projects" element={<MyProjects />} />
           <Route path="/tutorials" element={<MyTutorials />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </Router>
     </div>
