@@ -59,9 +59,7 @@ function App() {
       <Router>
         <StyledAppBar position="static">
           <StyledToolbar>
-            <Typography variant="h6" component={Link} to="/">
-              SMH
-            </Typography>
+            <Typography variant="h6" component={Link} to="/"></Typography>
             <IconButton color="inherit" onClick={handleMenuOpen}>
               <Menu />
             </IconButton>
