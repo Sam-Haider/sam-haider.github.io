@@ -65,6 +65,10 @@ const StyledButton = styled("button")`
   border: 1px solid white;
 `;
 
+const StyledAnchor = styled("a")`
+  color: #7fc1ff;
+`;
+
 function MyStory() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -80,7 +84,7 @@ function MyStory() {
 
       <ParagraphWrapper>
         <Paragraph>
-          Thanks for visiting my portfolio!gst As you can see, my love for
+          Thanks for visiting my portfolio! As you can see, my love for
           technology started at an early age. Although I began my career in the
           healthcare space as an R&D project manager for new drugs, I found
           myself increasingly being drawn to technology and decided to shift my
@@ -92,30 +96,32 @@ function MyStory() {
         <Paragraph>
           After taking 12 weeks to complete the software engineering immersive
           program at General Assembly in Boston, I spent several months ideating
-          and building the prototype for
-          {<a href="https://www.instagram.com/joylistapp/?hl=en"> JoyList </a>}
+          and building the prototype for{" "}
+          <StyledAnchor href="https://www.instagram.com/joylistapp/?hl=en">
+            {" "}
+            JoyList
+          </StyledAnchor>{" "}
           using MongoDB, Express, NodeJS, and React. I eventually hired a
-          software development team to take over development and build the
-          mobile apps so that I could focus on product development and customer
-          discovery. Through this experience, I sharpened my skills in full
-          stack development, startup operations, product management, and
-          customer discovery.
+          software development team to take over development so that I could
+          focus on product development and customer discovery. Through this
+          experience, I sharpened my skills in full stack development, startup
+          operations, product management, and customer discovery.
         </Paragraph>
       </ParagraphWrapper>
 
       <ParagraphWrapper>
         <Paragraph>
-          After spending about a year and a half developing JoyList, while also
-          doing some consulting on the side at Alexion, I decided to join HqO as
-          a Software Engineer to help them build their resource booking web
-          application. At HqO, my team was focused on building the company's
-          flagship product, a customer-facing e-commerce application that
-          allowed users to book rooms throughout their office buildings and
-          customize their bookings with amenities, add-ons, catering, and more.
-          At HqO, I learned about the software development lifecycle, how all
-          the teams that are involved in shipping a high-quality software
-          product work together, and how high-performing scrum teams deliver
-          high-value features at a fast pace and with great quality.
+          After spending about a year and a half developing JoyList, I decided
+          to join HqO as a Software Engineer to help them build their resource
+          booking web application. At HqO, my team was focused on building the
+          company's flagship product, a customer-facing e-commerce application
+          that allowed users to book resources throughout their office buildings
+          and customize their bookings with amenities, add-ons, catering, and
+          more. At HqO, I was surrounded by incredible teams of technology
+          professionals and many senior full stack engineers. I learned about
+          the software development lifecycle, how to collaborate with many
+          teammates on big, complex projects, how to troubleshoot nasty bugs,
+          and how to write well-designed, testable, and modular front-end code.
         </Paragraph>
       </ParagraphWrapper>
 
@@ -126,8 +132,9 @@ function MyStory() {
           some traveling with my wonderful wife and to attend to some personal
           matters, and now I'm back looking for my next role as a front end
           engineer. I'm hoping to join a team that values diversity and
-          collaboration, and am very enthusiastic about working with JavaScript
-          and React.
+          collaboration, and loves JavaScript and React as much as I do. If that
+          sounds like you, please{" "}
+          <StyledAnchor href="/contact">get in touch!</StyledAnchor>
         </Paragraph>
       </ParagraphWrapper>
 

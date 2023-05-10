@@ -65,10 +65,10 @@ function Contact() {
   return (
     <PageWrapper>
       <PageTitleWrapper>
-        <PageTitle>Contact Me</PageTitle>
+        <PageTitle>Get in touch</PageTitle>
       </PageTitleWrapper>
       <ImageWrapper>
-        <Image src="images/abstract.jpg" alt="Your photo" />
+        <Image src="images/phone.jpg" alt="Your photo" />
       </ImageWrapper>
       <ContactWrapper>
         <ContactLink href="mailto:SamMHaider0@gmail.com">
