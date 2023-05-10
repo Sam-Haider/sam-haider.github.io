@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { styled } from "@mui/system";
 import { Link } from "react-router-dom";
 
@@ -67,7 +67,42 @@ const StyledButton = styled("button")`
   border: 1px solid white;
 `;
 
+const SkeletonLoader = styled("div")`
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.1) 25%,
+    rgba(255, 255, 255, 0.25) 50%,
+    rgba(255, 255, 255, 0.1) 75%
+  );
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+  transition: opacity 0.3s ease-in;
+  opacity: ${({ isLoading }) => (isLoading ? 1 : 0)};
+  z-index: 1;
+
+  @keyframes loading {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+`;
+
+const ImageWrapper = styled("div")`
+  position: relative;
+`;
+
 function Home() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  const handleImageLoad = () => {
+    setIsLoading(false);
+  };
   return (
     <PageWrapper>
       <WelcomeWrapper>
@@ -82,7 +117,15 @@ function Home() {
       </GreetingWrapper>
 
       <Wrapper>
-        <Image src="images/profile.jpeg" alt="Your photo" />
+        <ImageWrapper>
+          <SkeletonLoader hidden={!isLoading} isLoading={isLoading} />
+          <Image
+            src="images/profile.jpeg"
+            alt="Your photo"
+            onLoad={handleImageLoad}
+            hidden={isLoading}
+          />
+        </ImageWrapper>
       </Wrapper>
 
       <ButtonWrapper>
