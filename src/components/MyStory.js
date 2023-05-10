@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { styled } from "@mui/system";
 import { Link } from "react-router-dom";
 
@@ -66,6 +66,9 @@ const StyledButton = styled("button")`
 `;
 
 function MyStory() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <PageWrapper>
       <PageTitleWrapper>
@@ -77,7 +80,7 @@ function MyStory() {
 
       <ParagraphWrapper>
         <Paragraph>
-          Thanks for visiting my portfolio! As you can see, my love for
+          Thanks for visiting my portfolio!gst As you can see, my love for
           technology started at an early age. Although I began my career in the
           healthcare space as an R&D project manager for new drugs, I found
           myself increasingly being drawn to technology and decided to shift my

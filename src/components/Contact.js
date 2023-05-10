@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { styled } from "@mui/system";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons/faEnvelope";
@@ -41,7 +41,7 @@ const ImageWrapper = styled("div")`
 const ContactWrapper = styled("div")`
   padding: 20px;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   flex-wrap: wrap;
 `;
 
@@ -58,6 +58,10 @@ const Icon = styled(FontAwesomeIcon)`
 `;
 
 function Contact() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <PageWrapper>
       <PageTitleWrapper>
