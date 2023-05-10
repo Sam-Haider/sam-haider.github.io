@@ -67,6 +67,12 @@ const StyledButton = styled("button")`
 
 const StyledAnchor = styled("a")`
   color: #7fc1ff;
+  text-decoration: none;
+`;
+
+const StyledInternalLink = styled(Link)`
+  color: #7fc1ff;
+  text-decoration: none;
 `;
 
 function MyStory() {
@@ -134,7 +140,7 @@ function MyStory() {
           engineer. I'm hoping to join a team that values diversity and
           collaboration, and loves JavaScript and React as much as I do. If that
           sounds like you, please{" "}
-          <StyledAnchor href="/contact">get in touch!</StyledAnchor>
+          <StyledInternalLink to="/contact">get in touch!</StyledInternalLink>
         </Paragraph>
       </ParagraphWrapper>
 
