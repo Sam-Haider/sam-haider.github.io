@@ -77,7 +77,7 @@ function MyStory() {
 
       <ParagraphWrapper>
         <Paragraph>
-          Thanks for visiting my portfolio. As you can see, my love for
+          Thanks for visiting my portfolio! As you can see, my love for
           technology started at an early age. Although I began my career in the
           healthcare space as an R&D project manager for new drugs, I found
           myself increasingly being drawn to technology and decided to shift my
