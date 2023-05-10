@@ -5,6 +5,7 @@ import MyStory from "./components/MyStory";
 import MyProjects from "./components/MyProjects";
 import MyTutorials from "./components/MyTutorials";
 import Contact from "./components/Contact";
+import PreloadImages from "./components/PreloadImages";
 import "./App.css";
 import {
   AppBar,
@@ -107,6 +108,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </Router>
+      <PreloadImages></PreloadImages>
     </div>
   );
 }
