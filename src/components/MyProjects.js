@@ -93,9 +93,9 @@ function MyProjects() {
       </ImageWrapper>
 
       <ProjectsWrapper>
-        <a className="project-link" href="https://www.google.com">
-          <Project src="images/laptop.jpg"></Project>
-          <ProjectDescription>MongoDB, Express, Node, React</ProjectDescription>
+        <a className="project-link" href="https://chasetheword.netlify.app">
+          <Project src="images/WordChase.jpg"></Project>
+          <ProjectDescription>React, JavaScript, CSS</ProjectDescription>
         </a>
         <a className="project-link" href="https://www.google.com">
           <Project src="images/laptop.jpg"></Project>
