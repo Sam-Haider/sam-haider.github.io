@@ -54,12 +54,37 @@ const Project = styled("img")`
   color: white;
   font-size: 1.3rem;
   width: 100%;
+  max-width: 500px;
 `;
 
 const ProjectDescription = styled("div")`
   color: white;
   text-align: center;
   margin-bottom: 20px;
+  flex-basis: 100%;
+  font-size: 20px;
+`;
+
+const ProjectButtonsWrapper = styled("div")`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 500px;
+`;
+
+const ProjectButton = styled("a")`
+  padding: 5px 10px;
+  background-image: linear-gradient(to right, #031148, #06000e);
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid white;
+  width: 30%;
+  margin-bottom: 10px;
+  text-decoration: none;
 `;
 
 const ButtonWrapper = styled("div")`
@@ -93,24 +118,42 @@ function MyProjects() {
       </ImageWrapper>
 
       <ProjectsWrapper>
-        <a className="project-link" href="https://chasetheword.netlify.app">
-          <Project src="images/WordChase.jpg"></Project>
-          <ProjectDescription>React, JavaScript, CSS</ProjectDescription>
-        </a>
-        <a className="project-link" href="https://www.google.com">
-          <Project src="images/laptop.jpg"></Project>
-          <ProjectDescription>
-            MongoDB, Express, Node, React. MongoDB, Express, Node, React.
-            MongoDB, Express, Node, React
-          </ProjectDescription>
-        </a>
-        <a className="project-link" href="https://www.google.com">
-          <Project src="images/laptop.jpg"></Project>
-          <ProjectDescription>
-            MongoDB, Express, Node, React. MongoDB, Express, Node, React.
-            MongoDB, Express, Node, React
-          </ProjectDescription>
-        </a>
+        <Project src="images/WordChase.jpg"></Project>
+        <ProjectDescription>React, JavaScript, CSS</ProjectDescription>
+        <ProjectButtonsWrapper>
+          <ProjectButton href="https://github.com/Sam-Haider/WordChase">
+            Code
+          </ProjectButton>
+          <ProjectButton href="https://chasetheword.netlify.app">
+            App
+          </ProjectButton>
+        </ProjectButtonsWrapper>
+
+        <Project src="images/invpropcalc.jpg"></Project>
+        <ProjectDescription>
+          React, JavaScript, CSS, Express, NodeJS, MongoDB
+        </ProjectDescription>
+        <ProjectButtonsWrapper>
+          <ProjectButton href="https://github.com/Sam-Haider/investment-property-calc">
+            Code
+          </ProjectButton>
+          <ProjectButton href="https://main--investment-property-calc.netlify.app/">
+            App
+          </ProjectButton>
+        </ProjectButtonsWrapper>
+
+        <Project src="images/invpropcalc.jpg"></Project>
+        <ProjectDescription>
+          React, JavaScript, CSS, Express, NodeJS, MongoDB
+        </ProjectDescription>
+        <ProjectButtonsWrapper>
+          <ProjectButton href="https://github.com/Sam-Haider/investment-property-calc">
+            Code
+          </ProjectButton>
+          <ProjectButton href="https://main--investment-property-calc.netlify.app/">
+            App
+          </ProjectButton>
+        </ProjectButtonsWrapper>
       </ProjectsWrapper>
       <ButtonWrapper>
         <Link to="/tutorials">
