@@ -50,10 +50,16 @@ const ProjectsWrapper = styled("div")`
 `;
 
 const Project = styled("img")`
-  border: 1px solid white;
   color: white;
   font-size: 1.3rem;
   width: 100%;
+  max-width: 500px;
+`;
+
+const Separator = styled("div")`
+  width: 100%;
+  border-bottom: 3px solid #edd0ff;
+  margin-bottom: 30px;
   max-width: 500px;
 `;
 
@@ -120,9 +126,7 @@ function MyProjects() {
 
       <ProjectsWrapper>
         <Project src="images/quizzer.png"></Project>
-        <ProjectDescription>
-          React, JavaScript, CSS, Express, NodeJS, MongoDB
-        </ProjectDescription>
+        <ProjectDescription>React, JavaScript, CSS, OpenAI</ProjectDescription>
         <ProjectButtonsWrapper>
           <ProjectButton href="https://github.com/Sam-Haider/js-quizzer">
             Code
@@ -131,6 +135,7 @@ function MyProjects() {
             App
           </ProjectButton>
         </ProjectButtonsWrapper>
+        <Separator></Separator>
         <Project src="images/chasetheword.png"></Project>
         <ProjectDescription>React, JavaScript, CSS</ProjectDescription>
         <ProjectButtonsWrapper>
@@ -141,7 +146,7 @@ function MyProjects() {
             App
           </ProjectButton>
         </ProjectButtonsWrapper>
-
+        <Separator></Separator>
         <Project src="images/invpropcalc.png"></Project>
         <ProjectDescription>
           React, JavaScript, CSS, Express, NodeJS, MongoDB
