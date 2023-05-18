@@ -119,6 +119,18 @@ function MyProjects() {
       </ImageWrapper>
 
       <ProjectsWrapper>
+        <Project src="images/quizzer.png"></Project>
+        <ProjectDescription>
+          React, JavaScript, CSS, Express, NodeJS, MongoDB
+        </ProjectDescription>
+        <ProjectButtonsWrapper>
+          <ProjectButton href="https://github.com/Sam-Haider/js-quizzer">
+            Code
+          </ProjectButton>
+          <ProjectButton href="https://js-react-quizzer.netlify.app/">
+            App
+          </ProjectButton>
+        </ProjectButtonsWrapper>
         <Project src="images/chasetheword.png"></Project>
         <ProjectDescription>React, JavaScript, CSS</ProjectDescription>
         <ProjectButtonsWrapper>
@@ -131,20 +143,6 @@ function MyProjects() {
         </ProjectButtonsWrapper>
 
         <Project src="images/invpropcalc.png"></Project>
-        <ProjectDescription>
-          React, JavaScript, CSS, Express, NodeJS, MongoDB
-        </ProjectDescription>
-        <ProjectButtonsWrapper>
-          <ProjectButton href="https://github.com/Sam-Haider/investment-property-calc">
-            Code
-          </ProjectButton>
-          <ProjectButton href="https://main--investment-property-calc.netlify.app/">
-            App
-          </ProjectButton>
-        </ProjectButtonsWrapper>
-
-        {/* update once ready */}
-        <Project src="images/invpropcalc.jpg"></Project>
         <ProjectDescription>
           React, JavaScript, CSS, Express, NodeJS, MongoDB
         </ProjectDescription>
