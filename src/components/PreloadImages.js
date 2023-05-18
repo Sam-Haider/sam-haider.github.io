@@ -6,6 +6,8 @@ const PreloadImages = () => {
     "images/brain.jpg",
     "images/laptop.jpg",
     "images/phone.jpg",
+    "images/chasetheword.png",
+    "images/invpropcalc.png",
   ];
 
   return (

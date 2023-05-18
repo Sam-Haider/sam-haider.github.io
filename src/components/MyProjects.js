@@ -25,7 +25,7 @@ const Image = styled("img")`
   border-bottom: 3px solid transparent;
   border-top: 3px solid transparent;
   background-image: linear-gradient(white, white),
-    linear-gradient(to right, #bf2536, pink);
+    linear-gradient(to right, rgb(69, 216, 255), purple);
   background-origin: border-box;
   background-clip: content-box, border-box;
 `;
@@ -60,6 +60,7 @@ const Project = styled("img")`
 const ProjectDescription = styled("div")`
   color: white;
   text-align: center;
+  margin-top: 10px;
   margin-bottom: 20px;
   flex-basis: 100%;
   font-size: 20px;
@@ -118,7 +119,7 @@ function MyProjects() {
       </ImageWrapper>
 
       <ProjectsWrapper>
-        <Project src="images/WordChase.jpg"></Project>
+        <Project src="images/chasetheword.png"></Project>
         <ProjectDescription>React, JavaScript, CSS</ProjectDescription>
         <ProjectButtonsWrapper>
           <ProjectButton href="https://github.com/Sam-Haider/WordChase">
@@ -129,7 +130,7 @@ function MyProjects() {
           </ProjectButton>
         </ProjectButtonsWrapper>
 
-        <Project src="images/invpropcalc.jpg"></Project>
+        <Project src="images/invpropcalc.png"></Project>
         <ProjectDescription>
           React, JavaScript, CSS, Express, NodeJS, MongoDB
         </ProjectDescription>
@@ -142,6 +143,7 @@ function MyProjects() {
           </ProjectButton>
         </ProjectButtonsWrapper>
 
+        {/* update once ready */}
         <Project src="images/invpropcalc.jpg"></Project>
         <ProjectDescription>
           React, JavaScript, CSS, Express, NodeJS, MongoDB
@@ -155,6 +157,7 @@ function MyProjects() {
           </ProjectButton>
         </ProjectButtonsWrapper>
       </ProjectsWrapper>
+
       <ButtonWrapper>
         <Link to="/tutorials">
           <StyledButton>My Tutorials</StyledButton>
