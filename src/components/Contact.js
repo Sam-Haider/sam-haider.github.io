@@ -63,7 +63,7 @@ function Contact() {
   }, []);
 
   return (
-    <PageWrapper>
+    <PageWrapper className="fade-in">
       <PageTitleWrapper>
         <PageTitle>Get in touch</PageTitle>
       </PageTitleWrapper>

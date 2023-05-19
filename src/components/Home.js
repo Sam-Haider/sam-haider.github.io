@@ -104,7 +104,7 @@ function Home() {
     setIsLoading(false);
   };
   return (
-    <PageWrapper>
+    <PageWrapper className="fade-in">
       <WelcomeWrapper>
         <Welcome>Welcome</Welcome>
       </WelcomeWrapper>

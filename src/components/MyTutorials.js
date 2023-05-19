@@ -85,7 +85,7 @@ function MyVideos() {
   }, []);
 
   return (
-    <PageWrapper>
+    <PageWrapper className="fade-in">
       <PageTitleWrapper>
         <PageTitle>My Tutorials</PageTitle>
       </PageTitleWrapper>

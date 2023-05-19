@@ -116,7 +116,7 @@ function MyProjects() {
   }, []);
 
   return (
-    <PageWrapper>
+    <PageWrapper className="fade-in">
       <PageTitleWrapper>
         <PageTitle>My Projects</PageTitle>
       </PageTitleWrapper>

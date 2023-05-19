@@ -36,3 +36,17 @@
   min-height: 100vh;
   font-family: "Open Sans", sans-serif;
 }
+
+.fade-in {
+  opacity: 0;
+  animation: fadeInAnimation 250ms ease-in forwards;
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

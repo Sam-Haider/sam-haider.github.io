@@ -80,7 +80,7 @@ function MyStory() {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <PageWrapper>
+    <PageWrapper className="fade-in">
       <PageTitleWrapper>
         <PageTitle>My Story</PageTitle>
       </PageTitleWrapper>
