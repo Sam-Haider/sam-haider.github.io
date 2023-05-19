@@ -6,6 +6,7 @@ import MyProjects from "./components/MyProjects";
 import MyTutorials from "./components/MyTutorials";
 import Contact from "./components/Contact";
 import PreloadImages from "./components/PreloadImages";
+import styled, { keyframes } from "styled-components";
 import "./App.css";
 import {
   AppBar,
@@ -15,46 +16,60 @@ import {
   List,
   ListItem,
   ListItemText,
-  Typography,
   Box,
 } from "@mui/material";
 import { Menu } from "@mui/icons-material";
-import { styled } from "@mui/material/styles";
 
-const StyledAppBar = styled(AppBar)({
-  backgroundColor: "#333",
-  boxShadow: "none",
-  borderBottom: "1px solid #ccc",
-});
-const StyledFooter = styled("div")({
-  color: "white",
-  textAlign: "center",
-  marginTop: "20px",
-  paddingBottom: "20px",
-});
+const spinAnimation = keyframes`
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+`;
 
-const StyledToolbar = styled(Toolbar)({
-  display: "flex",
-  justifyContent: "space-between",
-});
+const StyledAppBar = styled(AppBar)`
+  background-color: #333;
+  box-shadow: none;
+  border-bottom: 1px solid #ccc;
+`;
 
-const StyledDrawer = styled(Drawer)({
-  "& .MuiDrawer-paper": {
-    background: "linear-gradient(to bottom right, #000000, #000000, #150f26)",
-    color: "#fff",
-    paddingTop: "20px",
-  },
-});
+const StyledFooter = styled.div`
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+  padding-bottom: 20px;
+`;
 
-const StyledLink = styled(Link)({
-  color: "#fff",
-  textDecoration: "none",
-  fontSize: "1.2rem",
-  padding: "10px",
-  "&:hover": {
-    textDecoration: "underline",
-  },
-});
+const StyledToolbar = styled(Toolbar)`
+  display: flex;
+  justify-content: space-between;
+`;
+
+const StyledDrawer = styled(Drawer)`
+  & .MuiDrawer-paper {
+    background: linear-gradient(to bottom right, #000000, #000000, #150f26);
+    color: #fff;
+    padding-top: 20px;
+  }
+`;
+
+const StyledLink = styled(Link)`
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 10px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
+const Logo = styled.img`
+  width: 40px;
+  animation: ${spinAnimation} 10s linear infinite;
+`;
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -66,7 +81,7 @@ function App() {
       <Router>
         <StyledAppBar position="static">
           <StyledToolbar>
-            <Typography variant="h6" component={Link} to="/"></Typography>
+            <Logo src="images/logo.png"></Logo>
             <IconButton color="inherit" onClick={handleMenuOpen}>
               <Menu />
             </IconButton>
