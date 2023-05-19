@@ -12,6 +12,7 @@ const PageTitleWrapper = styled("div")`
   display: flex;
   justify-content: left;
 `;
+
 const PageTitle = styled("div")`
   color: white;
   font-size: 40px;
@@ -25,7 +26,7 @@ const Image = styled("img")`
   border-bottom: 3px solid transparent;
   border-top: 3px solid transparent;
   background-image: linear-gradient(white, white),
-    linear-gradient(to right, #3423b8, pink);
+    linear-gradient(to right, #3423b8, yellow);
   background-origin: border-box;
   background-clip: content-box, border-box;
 `;
@@ -41,22 +42,6 @@ const TutorialsWrapper = styled("div")`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-`;
-
-const TutorialLink = styled("a")`
-  width: 25%;
-  min-width: 300px;
-  margin: 10px;
-
-  @media (min-width: 768px) {
-    width: calc(25% - 20px);
-  }
-`;
-
-const TutorialImage = styled("img")`
-  border: 1px solid white;
-  height: 200px;
-  width: 100%;
 `;
 
 const TutorialDescription = styled("div")`
@@ -81,6 +66,19 @@ const StyledButton = styled("button")`
   border: 1px solid white;
 `;
 
+const Iframe = styled("iframe")`
+  width: 100%;
+  min-width: 300px;
+  border: 1px solid white;
+  margin: 10px;
+`;
+
+const Separator = styled("div")`
+  width: 100%;
+  border-bottom: 3px solid #b6981f;
+  margin: 30px 0;
+`;
+
 function MyVideos() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -92,27 +90,64 @@ function MyVideos() {
         <PageTitle>My Tutorials</PageTitle>
       </PageTitleWrapper>
       <ImageWrapper>
-        <Image src="images/brain.jpg" alt="Your photo" />
+        <Image src="images/lightbulb.jpg" alt="Your photo" />
       </ImageWrapper>
       <TutorialsWrapper>
-        <TutorialLink href="#">
-          <TutorialImage src="images/placeholder.jpg"></TutorialImage>
-          <TutorialDescription>
-            This is a description of the first video project.
-          </TutorialDescription>
-        </TutorialLink>
-        <TutorialLink href="#">
-          <TutorialImage src="images/placeholder.jpg"></TutorialImage>
-          <TutorialDescription>
-            This is a description of the second video project.
-          </TutorialDescription>
-        </TutorialLink>
-        <TutorialLink href="#">
-          <TutorialImage src="images/placeholder.jpg"></TutorialImage>
-          <TutorialDescription>
-            This is a description of the third video project.
-          </TutorialDescription>
-        </TutorialLink>
+        <Iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/g4o80A9E-u8"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></Iframe>
+        <TutorialDescription>Closures</TutorialDescription>
+        <Separator></Separator>
+        <Iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/nbmkQuervgc"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></Iframe>
+        <TutorialDescription>Asynchronous Programming</TutorialDescription>
+        <Separator></Separator>
+        <Iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/bFCNODWtm-s"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></Iframe>
+        <TutorialDescription>Recursion</TutorialDescription>
+        <Separator></Separator>
+        <Iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/-J_Z6OPxOL0"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></Iframe>
+        <TutorialDescription>Binary Search</TutorialDescription>
+        <Separator></Separator>
+        <Iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/P9o1-DLllhs"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></Iframe>
+        <TutorialDescription>Git Rebase vs. Merge</TutorialDescription>
+        <Separator></Separator>
       </TutorialsWrapper>
       <ButtonWrapper>
         <Link to="/contact">
