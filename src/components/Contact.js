@@ -7,6 +7,7 @@ import { faLinkedin } from "@fortawesome/free-brands-svg-icons/faLinkedin";
 const PageWrapper = styled("div")`
   max-width: 800px;
   margin: 0 auto;
+  min-height: calc(100vh - 120px);
 `;
 
 const PageTitleWrapper = styled("div")`

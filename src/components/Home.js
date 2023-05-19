@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 const PageWrapper = styled("div")`
   max-width: 800px;
   margin: 0 auto;
+  min-height: calc(100vh - 120px);
 `;
 
 const Image = styled("img")`

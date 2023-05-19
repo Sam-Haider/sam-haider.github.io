@@ -26,6 +26,12 @@ const StyledAppBar = styled(AppBar)({
   boxShadow: "none",
   borderBottom: "1px solid #ccc",
 });
+const StyledFooter = styled("div")({
+  color: "white",
+  textAlign: "center",
+  marginTop: "20px",
+  paddingBottom: "20px",
+});
 
 const StyledToolbar = styled(Toolbar)({
   display: "flex",
@@ -109,6 +115,7 @@ function App() {
         </Routes>
       </Router>
       <PreloadImages></PreloadImages>
+      <StyledFooter>Designed & built by Sam Haider, 2023</StyledFooter>
     </div>
   );
 }
