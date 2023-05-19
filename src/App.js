@@ -115,6 +115,14 @@ function App() {
               </StyledLink>
             </ListItem>
             <ListItem>
+              <StyledLink
+                to="https://samnoonhaider.wordpress.com/"
+                onClick={handleMenuOpen}
+              >
+                My Blog
+              </StyledLink>
+            </ListItem>
+            <ListItem>
               <StyledLink to="/contact" onClick={handleMenuOpen}>
                 Get In Touch
               </StyledLink>
